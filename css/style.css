@@ -1,0 +1,211 @@
+:root {
+    --color-primary: #ff00ff;
+    --color-secondary: #00e5ff;
+    --color-intermediary: #8a2be2;
+
+    --color-background: #05001a;
+    --color-background-main: #08002c;
+    --color-background-nav: #0a002a;
+
+    --principal-font: 'Inter', sans-serif;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    min-height: 100vh;
+    font-family: var(--principal-font);
+    background-color: var(--color-background-main);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    background-color: var(--color-background);
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.title {
+    font-weight: 700;
+    font-size: 50px;
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary),
+        var(--color-intermediary),
+        var(--color-secondary)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+.nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 8px 0;
+
+    background-color: var(--color-background-nav);
+
+    border: 1px solid var(--color-primary);
+}
+
+
+/* =========================
+   LINKS GENERALES
+========================= */
+
+.anclaje {
+    padding: 8px 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    border: 1px solid var(--color-primary);
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 5px var(--color-primary),
+        0 0 15px rgba(255, 0, 255, 0.5);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   LINK HOME
+========================= */
+
+.home {
+    padding: 8px 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    border: 1px solid var(--color-secondary);
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 5px var(--color-secondary),
+        0 0 15px rgba(0, 229, 255, 0.5);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   HOVER LINKS
+========================= */
+
+.anclaje:hover {
+    color: var(--color-secondary);
+
+    border-color: var(--color-secondary);
+
+    box-shadow:
+        0 0 5px var(--color-secondary),
+        0 0 15px var(--color-secondary),
+        0 0 30px rgba(0, 229, 255, 0.5);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HOVER HOME
+========================= */
+
+.home:hover {
+    color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    box-shadow:
+        0 0 5px var(--color-primary),
+        0 0 15px var(--color-primary),
+        0 0 30px rgba(255, 0, 255, 0.5);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+    position: absolute;
+    justify-content: space-evenly;
+    background-color: var(--color-background);
+}
+
+
+
+/* =========================
+   CAJA PRINCIPAL
+========================= */
+
+.caja {
+    width: 100%;
+    background-color: var(--color-background-main);
+    clip-path: polygon(
+        25px 0,
+        calc(100% - 25px) 0,
+        100% 25px,
+        100% calc(100% - 25px),
+        calc(100% - 25px) 100%,
+        25px 100%,
+        0 calc(100% - 25px),
+        0 25px
+    );
+    filter:
+        drop-shadow(0 0 10px var(--color-primary))
+        drop-shadow(0 0 25px var(--color-primary));
+}
